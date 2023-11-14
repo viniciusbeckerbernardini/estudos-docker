@@ -1,0 +1,11 @@
+O docker file é usado para criar imagens docker a partir de outras imagens e agregar comandos e definições a elas.
+
+Podemos assim criar nossa própria imagem com os recursos que necessitamos sem a necessidade de instalar sempre as coisas a cada vez que subimos um container.
+
+O docker file geralmente vai partir de uma imagem e depois podemos dar os comandos para que ele faça o que precisamos
+
+o comando para fazer o build é o:
+
+docker build -t [nome_da_build:versao_da_build] [caminho_para_build]
+
+Se o caminho for o diretorio de execução do comando será posto o "." para representar que estamos no local que será buscado o arquivo de build Dockerfile

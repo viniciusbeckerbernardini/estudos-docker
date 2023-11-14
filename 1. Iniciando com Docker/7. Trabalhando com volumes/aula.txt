@@ -1,0 +1,21 @@
+Os volumes são criados pelo docker e ocupam espaços fisicos da nossa máquina que podemos usar para persistir os dados dos containers e compartilhalhos sem que precisemos especificar um caminho como no bind values
+
+Comando para criação de volume:
+
+- docker create volume meuvolume
+
+Podemos montar o volume em um container com o comando: 
+
+-- Mount type: 
+ - docker run --name nginx -d --mount type=volume,source=meuvolume,target=/app nginx
+
+- Mount -v :
+ - docker run --name nginx3 -d -v meuvolume:/app nginx
+
+
+E como foi criado um volume, os arquivos criados nele por ambos os containers são compartilhados, se eu criei no container 1 o 2 pode acessar também pois ambos estão acessando o mesmo volume de dados.
+
+* Para limpeza de espaço dos volumes usamos o comando PRUNE:
+
+- docker volume prune
+

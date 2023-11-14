@@ -1,0 +1,27 @@
+Bind mount :
+
+Aloca um espaço do seu computador no container para persistir mesmo que o container seja morto:
+
+
+[docker run -d --name nginx -p 8080:80] [-v /mnt/c/Users/vbkJi/Documents/_study/docker/bind_mounts/:/usr/share/nginx/html] [nginx]
+
+docker run : executa o docker
+
+-d : Roda em background
+
+--name : nome do container
+
+-p : porta que vai rodar (primeira porta é a do nosso pc e a segunda é a do container)
+
+Binding values (Vinculos de valores)
+
+-v é : serve para fazer o bind volume, ou seja, fazer com que caminhos do container acessem espaços do nosso disco fazendo com que mesmo com que nós matemos o container os dados perssistam
+
+--mount: 
+
+[docker run -d --name nginx -p 8080:80] [--mount type=bind, source=/mnt/c/Users/vbkJi/Documents/_study/docker/bind_mounts/,target=/usr/share/nginx/html] [nginx]
+
+
+Diferenças:
+
+-v cria os volumes caso não existem, --mount não cria, só monta

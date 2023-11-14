@@ -1,0 +1,15 @@
+Processo para nginx proxy reverso assim todo mundo que entrar no site o nginx vai puxar a porta do processo e expor pro usuário
+
+Após criar o dockerfile do nginx precisamos fazer essa gurizada aí se comunicar porque cada container roda de forma individual e não enxerga o outro.
+
+Comando pra isso: 
+
+1 - criar uma network
+
+docker build -t viniciusbeckerbernardini/laravel:prod -f Dockerfile.prod .
+docker run -d --network laranet --name laravel viniciusbeckerbernardini/laravel:prod 
+docker build -t viniciusbeckerbernardini/nginx:prod -f Dockerfile.prod .
+docker run -d --network laranet --name nginx -p 8001:8001 viniciusbeckerbernardini/nginx:prod
+
+OBS: o php fpm não serve imagens, apenas arquivos .php então caso houvessem arquivos de imagem e css no seu laravel necessitaria transportar estes para o nginx
+

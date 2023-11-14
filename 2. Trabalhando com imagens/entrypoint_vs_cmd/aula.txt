@@ -1,0 +1,5 @@
+Entrypoint: comando fixo
+
+cmd: comando variavel
+
+cmd também serve para por os parametros do comando entrypoint

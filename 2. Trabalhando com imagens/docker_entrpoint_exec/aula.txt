@@ -1,0 +1,7 @@
+Entrypoint é executado antes do cmd
+
+Sem o entrypoint o que é executado é o cmd diretamente 
+
+O que mantem o container é o processo que está rodando, caso o processo termine o container também é desligado
+
+na imagem nginx o comando é o comando de ligar o servidor

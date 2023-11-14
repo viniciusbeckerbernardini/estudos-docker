@@ -1,0 +1,1 @@
+usando a tag volumes no docker-compose.yml podemos especificar volumes para dados persistentes e arquivos de projeto tal como a opção -v que usamos no CLI do docker

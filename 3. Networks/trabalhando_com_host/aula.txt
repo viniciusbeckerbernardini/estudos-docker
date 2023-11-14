@@ -1,0 +1,3 @@
+o tipo de network host junta a rede do container a rede do computador, se tu rodar um container que roda o nginx ou apache2 na porta 80 e usar o tipo de network host pode acessar a partir do teu navegador que a porta 80 do computador estara mesclada com a do container
+
+docker run --rm -d --name nginx --network host nginx

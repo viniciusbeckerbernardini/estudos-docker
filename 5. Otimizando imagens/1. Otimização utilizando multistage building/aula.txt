@@ -1,0 +1,7 @@
+Quando estamos estudando a dockerização de um container pra desenvolvimento geralmente utilizamos imagens recheadas de recursos porém quando vamos passar para um ambiente de produção a ideia é que nós deixemos o container o mais enxuto e otimizado possível. Quanto menor a imagem melhor, mais rápido de subir, mais rápido de baixar, menos vulnerabilidades de segurança pela falta de recursos que não são utilizados.
+
+As imagens que usam alpine linux são muito utilizadas por atenderem esses requisitos.
+
+Objetivo deste capitulo é gerar uma imagem de produção do laravel.
+
+Com alpine ou imagens mais limitadas não existem gerenciadores de pacotes instalados como o apt-get por exemplo. Pra isso vamos estudar multistage build

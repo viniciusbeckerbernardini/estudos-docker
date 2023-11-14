@@ -1,0 +1,4 @@
+para subir os containerners para o docker hub usamos precisamos seguir os seguintes passos:
+
+1 - usar o comando docker login para logar com nossa conta no computador
+2 - docker push [nome da imagem]

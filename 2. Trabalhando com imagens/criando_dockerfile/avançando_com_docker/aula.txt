@@ -1,0 +1,8 @@
+
+WORKDIR especifica o diretório que iremos trabalhar dentro do container
+
+apt update -y dispensa a confirmação de permissão
+
+para acessar o bash o comando será o:
+
+docker run -it [nome do container:versao] [aplicação desejada]

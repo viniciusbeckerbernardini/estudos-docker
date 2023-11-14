@@ -1,0 +1,33 @@
+listar todas as networks do docker:
+- docker network ls 
+
+desativar todas as networks em uso:
+- docker network prune 
+
+-dit (dettach = roda em background, it = interativo)
+
+--name (nom do container)
+
+docker run -dit --name ubuntu1 bash 
+
+docker run -dit --name ubuntu2 bash 
+
+se tentarmos pingar o ubuntu2 no ubuntu ele não vai achar porque não estão na mesma network
+
+podemos criar uma network com o comando:
+
+docker network create --driver  bridge rede_dos_guri
+
+podemos inspecionar 
+
+docker network inspect rede_dos_guri
+
+criar um container atrelado a uma network com o comando:
+
+docker run -dit --name ubuntu4 --network rede_dos_guri bash 
+
+conectar um container em uma network: 
+
+docker network connect rede_dos_guri ubuntu5
+
+podemos pingar containers de mesma network

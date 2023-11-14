@@ -1,0 +1,10 @@
+As imagens ficam no docker hub, um container registry, lá existem todas as imagens que usamos pelo CLI.
+
+As imagens tem versões, podemos selecionar a versão através do ':'. A versão latest é a ultima versão da imagem. 
+
+Através do docker images nós temos uma list das imagens instaladas no sistema
+
+Através do comando docker rmi [nome da imagem] nós podemos remover uma imagem baixada
+
+É possível criar nossa própria imagem e publica-la no docker hub
+

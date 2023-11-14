@@ -1,0 +1,5 @@
+podemos acessar a nossa maquina através do endereço:
+
+http://host.docker.internal
+
+podemos usar isso para buscar algum recurso que não está no container.

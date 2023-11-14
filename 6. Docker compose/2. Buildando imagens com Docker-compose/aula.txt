@@ -1,0 +1,7 @@
+build: Usamos o build para especificar as opções para a montagem do container, isso é útil pois muitas vezes teremos um Dockerfile local e não um dockerfile pronto. 
+context: é usado no build para que possamos passar o caminho do dockerfile
+dockerfile: é o nome do dockerfile
+
+comandos úteis: para fazer uma remontagem (rebuild) do container após alterações do docker-compose podemos usar o comando:
+
+docker-compose up [-d] --build

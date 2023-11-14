@@ -1,0 +1,9 @@
+tipos de rede 
+
+bridge: quando quer fazer uma ponte entre dois ou mais containers, conexão entre eles facilitada
+
+host: mescla a rede do docker e da maquina host. Exemplo, se tu tiver rodando uma aplicação na porta 80 da imagem, tu pode acessar essa aplicação pela mesma porta através do seu pc que é o host.
+
+overlay: usado para escalar aplicações, juntando vairas maquinas para obter o resultado
+
+maclan

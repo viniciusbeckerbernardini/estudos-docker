@@ -1,0 +1,9 @@
+O docker compose é uma ferramenta de gerenciamento de containers que nos permite buildar e subir imagens de maneira mais simples sem que precisemos passar diversos comandos para alocação de volumes, portas, nomes, networks, etc.
+
+para usar o docker compose precisamos criar o arquivo docker-compose.yml e nele especificar os detalhes do(s) container(s)
+
+para isso usamos o comando [docker-compose [operacao (up|down)] [-d (rodar em background)]] 
+
+para rodar este docker compose da pasta usariamos o comando docker-compose up, se quiser rodar em segundo plano acrescente o parametro -d
+
+o docker compose é muito util pois pula uma etapa de declaração dos containers e nos exime de precisar sempre lembrar e passar os parametros do container cada vez que formos rodalo.

@@ -1,0 +1,7 @@
+POdemos ter 2 arquivos Dockerfile, um de dev e outro de prod, no ultimo podemos dar o nome de Dockerfile.prod
+
+Neste de produção faremos o empacotamento dos arquivos usando o COPY [remetente] [destinatario]
+
+Para fazer o build do arquivo de prod usamos o comando:
+
+docker build -t [nome da imagem] . -f Dockerfile.prod

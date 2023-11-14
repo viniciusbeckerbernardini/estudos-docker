@@ -1,0 +1,11 @@
+Dependencia entre containers ocorre quando um container depende de um terceiro para seu funcionamento correto. Exemplo, o container de um app necessita do container do banco de dados funcional para que ele possa funcionar de maneira correta então para isso temos que assegurar que o container de banco de dados suba primeiro que o container de um app.
+
+Pra isso adotamos duas medidas: o parametro depends_on e o dockerize.
+
+depends_on: assegura que 1 container irá iniciar somente após os containers citados iniciarem, veja bem, isso não resolve o problema já que alguns containers levam mais tempo que outros para ficarem prontos e só inicar não garante que ele estará pronto quando o próximo iniciar.
+
+dockerize: dockerize é uma ferramenta que fica escutando a conexão e testando até que a mesma seja válida, dessa forma, alterando o entrypoint do container para ela podemos assegurar que o container inicie suas operações somente após a conexão com o container dependente ter sido estabelecida.
+
+exemplo: 
+
+entrypoint: dockerize -wait 20s tcp://db:3306 docker-entrypoint.sh

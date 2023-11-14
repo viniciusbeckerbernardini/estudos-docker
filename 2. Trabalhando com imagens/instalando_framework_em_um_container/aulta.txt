@@ -1,0 +1,9 @@
+Uma boa dica para fazer o docker file é instalar o container, e ir anotando os comandos que são necessários para que tu possa 
+chegar onde tu precisa, daí, tu pode depois ir montando o docker file de acordo com o que tu precisa fazer sem precisar advinhar
+
+Para substituir os comandos do cmd você pode passar após o comando docker run exemplo
+
+docker run --rm -d --name laravel -p 8080:8000 viniciusbeckerbernardini/laravel:latest [ --port=8080 ]
+
+quando o --rm é usado, após o que foi executado for concluido o container é removido
+ 
